@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div id={styles.background}>
+    <section id={styles.background}>
       <div className={styles.container}>
         <Image src="/logo/logo-final.png" width={100} height={40} alt="Logo" />
 
 
         <div className={styles.imageContainer}>
-          <Link href="/WhatWeDo">
+          <Link href="/WhatWeDo" className={styles.links}>
             <Image
               src="/images/front-what-we-do.png"
               width={230}
@@ -19,8 +19,8 @@ export default function Home() {
             />
           </Link>
 
-          <Link href="/MaintainAble">
-            <Image
+          <Link href="/MaintainAble" className={styles.links}>
+            <Image 
               src="/images/front-maintainable.png"
               width={230}
               height={500}
@@ -28,7 +28,7 @@ export default function Home() {
             />
           </Link>
 
-          <Link href="/GetInTouch">
+          <Link href="/GetInTouch" className={styles.links}>
             <Image
               src="/images/front-get-in-touch.png"
               width={230}
@@ -41,6 +41,6 @@ export default function Home() {
 
         <div className={styles.moreBtn}>And more yet to come..</div>
       </div>
-    </div>
+    </section>
   );
 }
