@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section id={styles.background}>
+    <div id={styles.background}>
       <div className={styles.container}>
         <Image src="/logo/logo-final.png" width={100} height={40} alt="Logo" />
 
@@ -41,6 +41,6 @@ export default function Home() {
 
         <div className={styles.moreBtn}>And more yet to come..</div>
       </div>
-    </section>
+    </div>
   );
 }

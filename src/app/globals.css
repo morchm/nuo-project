@@ -18,6 +18,26 @@ html{
   box-sizing: inherit;
 }
 
+menu{
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li{
+  text-decoration: none;
+  display: inline;
+
+}
+
 img{
   transition: 300ms ease-in-out;
+}
+
+h1{
+  font-size: 36px;
+}
+
+p{
+  color: white;
 }
