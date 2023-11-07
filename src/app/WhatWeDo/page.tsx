@@ -1,7 +1,8 @@
+"use client";
 import styles from "./whatwedo.page.module.scss";
 import Image from "next/image";
 import { Navigation } from "../components/navigation";
-import { getAllData } from "../query/getAllData";
+import { getAllData } from "../Data/getAllData";
 
 export default async function WhatWeDo() {
 
@@ -9,9 +10,9 @@ export default async function WhatWeDo() {
 
   return (
     <div id={styles.whatwedoBackground}>
-      <div className={styles.whatwedoContainer}>
+      <div className="pageContainer">
         <Navigation />
-        <article className={styles.whatwedoArticle}>
+        <article className="pageArticle">
           <Image
             src="/images/front-what-we-do-link.png"
             width={220}
@@ -19,11 +20,11 @@ export default async function WhatWeDo() {
             alt="What we do image"
           />
 
-          <section className={styles.whatwedoTextarea}>
+          <section className="Textarea">
             <h1>{data.textarea[0].h1}</h1>
             <p>{data.textarea[0].text}</p>
 
-            <div className={styles.bottomTitle}>What We Do</div>
+            <div className="bottomTitle">What We Do</div>
           </section>
         </article>
       </div>

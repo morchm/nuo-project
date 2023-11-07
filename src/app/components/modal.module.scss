@@ -1,0 +1,22 @@
+.modal {
+  width: 500px;
+  padding: 2rem;
+  border-radius: 10px;
+
+  background-color: white;
+
+  
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.modalInput{
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}

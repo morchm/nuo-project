@@ -1,43 +1,86 @@
-:root{
+:root {
   --WhatWeDo-background: #184059;
-  --MaintainAble-background: #5D8AA6;
-  --GetInTouch-background: #BF7B3F;
-  --Homepage-background: #B0D2E8;
-
+  --MaintainAble-background: #5d8aa6;
+  --GetInTouch-background: #bf7b3f;
+  --Homepage-background: #b0d2e8;
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   box-sizing: inherit;
 }
 
-menu{
+menu {
   width: 280px;
   display: flex;
   justify-content: space-between;
 }
 
-li{
+li {
   text-decoration: none;
   display: inline;
-
 }
 
-img{
+img {
   transition: 300ms ease-in-out;
 }
 
-h1{
+h1 {
   font-size: 36px;
 }
 
-p{
+p {
   color: white;
+}
+
+figcaption {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.pageContainer {
+  width: 960px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.pageArticle {
+  display: flex;
+  padding: 2rem 4rem;
+}
+
+.Textarea {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.bottomTitle {
+  align-self: flex-end;
+  padding: 3px;
+  border-radius: 3px;
+  margin: auto 0;
+  background-color: black;
+  color: white;
+
+  font-size: 20px;
+}
+
+input,
+textarea {
+
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px gray;
 }
