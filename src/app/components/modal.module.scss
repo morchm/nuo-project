@@ -20,3 +20,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.modalCloseBtn{
+  float: right;
+  width: 30px;
+  height: 30px;
+  padding: 0.2rem;
+  border-radius: 25%;
+
+  transition: 200ms ease-in-out;
+
+  &:hover{
+    color: red;
+    border: 2px solid red;
+    cursor: pointer;
+  }
+}

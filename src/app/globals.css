@@ -38,6 +38,10 @@ h1 {
   font-size: 36px;
 }
 
+h6{
+  color: red;
+}
+
 p {
   color: white;
 }

@@ -4,9 +4,12 @@ import styles from "./getintouch.page.module.scss";
 import { getAllData } from "../Data/getAllData";
 import Modal from "../components/modal";
 
+
+
 export default async function GetInTouch() {
   const data = await getAllData();
 
+ 
   return (
     <div id={styles.getintouchBackground}>
       <div className="pageContainer">
