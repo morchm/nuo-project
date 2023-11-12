@@ -1,8 +1,15 @@
+"use client"
+
 import styles from "./navigation.page.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export function Navigation() {
+  const path = usePathname();
+
+  console.log(path);
+
   return (
     <nav>
       <menu>
@@ -27,6 +34,9 @@ export function Navigation() {
               height={60}
               alt="what we do button"
             />
+            {path === "/WhatWeDo" && (
+              <ButtonUnderline src="/navigation/nav-1-where.png" />
+            )}
           </Link>
         </li>
 
@@ -38,6 +48,9 @@ export function Navigation() {
               height={60}
               alt="maintain able button"
             />
+           {path === "/MaintainAble" && (
+              <ButtonUnderline src="/navigation/nav-2-where.png" />
+            )}
           </Link>
         </li>
 
@@ -49,9 +62,24 @@ export function Navigation() {
               height={60}
               alt="get in touch button"
             />
+            {path === "/GetInTouch" && (
+              <ButtonUnderline src="/navigation/nav-3-where.png" />
+            )}
           </Link>
         </li>
       </menu>
     </nav>
+  );
+}
+
+function ButtonUnderline(props: { src: string }) {
+  return (
+    <Image
+      src={props.src}
+      width={60}
+      height={15}
+      alt="back"
+      className={styles.navUnderline}
+    />
   );
 }

@@ -1,7 +1,7 @@
 import { Navigation } from "../components/navigation";
 import Image from "next/image";
 import styles from "../WhatWeDo/whatwedo.page.module.scss";
-import { getAllData } from "../Data/getAllData";
+import { getAllData } from "../api/getAllData";
 
 export default async function MaintainAble() {
   const data = await getAllData();

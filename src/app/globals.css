@@ -31,7 +31,7 @@ li {
 }
 
 img {
-  transition: 300ms ease-in-out;
+  transition: 100ms ease-in-out;
 }
 
 h1 {
@@ -73,7 +73,7 @@ figcaption {
   align-self: flex-end;
   padding: 3px;
   border-radius: 3px;
-  margin: auto 0;
+  margin-top: auto;
   background-color: black;
   color: white;
 

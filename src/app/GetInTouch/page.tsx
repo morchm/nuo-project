@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Navigation } from "../components/navigation";
 import styles from "./getintouch.page.module.scss";
-import { getAllData } from "../Data/getAllData";
+import { getAllData } from "../api/getAllData";
 import Modal from "../components/modal";
 
 

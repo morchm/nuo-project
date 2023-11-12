@@ -1,5 +1,15 @@
 .navBtn{
+    position: relative;
     :hover{
         transform: scale(1.1);
     }
+}
+
+.navUnderline{
+position: absolute;
+left: 0;
+bottom: -10px;
+:hover{
+    transform: scale(1) !important ;
+}
 }
