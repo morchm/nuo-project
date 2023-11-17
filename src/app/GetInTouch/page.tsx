@@ -4,12 +4,12 @@ import styles from "./getintouch.page.module.scss";
 import { getAllData } from "../api/getAllData";
 import Modal from "../components/modal";
 
-
-
 export default async function GetInTouch() {
+
   const data = await getAllData();
 
- 
+  const textData = data.textarea[2];
+
   return (
     <div id={styles.getintouchBackground}>
       <div className="pageContainer">
@@ -23,14 +23,13 @@ export default async function GetInTouch() {
           />
 
           <section className="Textarea">
-            <h1>{data.textarea[2].h1}</h1>
-            <p>{data.textarea[2].text}</p>
+            <h1>{textData.h1.text}<span style={textData.h1.specialStyle}>{textData.h1.specialText}</span></h1>     
+            <p>{textData.p.text}</p>
 
-            <Modal/>
+            <Modal />
 
             <div className="bottomTitle">Get In Touch</div>
           </section>
-
         </article>
       </div>
     </div>

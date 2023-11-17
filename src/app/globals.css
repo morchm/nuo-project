@@ -38,7 +38,7 @@ h1 {
   font-size: 36px;
 }
 
-h6{
+h6 {
   color: red;
 }
 
@@ -56,6 +56,11 @@ figcaption {
   width: 960px;
   margin: auto;
   padding: 2rem 0;
+  /* Centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pageArticle {
@@ -82,9 +87,18 @@ figcaption {
 
 input,
 textarea {
-
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 3px;
   box-shadow: 1px 1px 2px gray;
+}
+
+/* DEKSTOP CLASS */
+.desktop {
+  display: block;
+}
+
+/* MOBILE CLASS */
+.mobile {
+  display: none;
 }

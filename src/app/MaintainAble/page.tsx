@@ -6,6 +6,7 @@ import { getAllData } from "../api/getAllData";
 export default async function MaintainAble() {
   const data = await getAllData();
 
+  const textData = data.textarea[1]
 
   return (
     <div id={styles.whatwedoBackground}>
@@ -20,8 +21,8 @@ export default async function MaintainAble() {
           />
 
           <section className="Textarea">
-            <h1>{data.textarea[1].h1}</h1>
-            <p>{data.textarea[1].text}</p>
+            <h1>{textData.h1.text}<span style={textData.h1.specialStyle}>{textData.h1.specialText}</span></h1>
+            <p>{textData.p.text}</p>
 
             <div className="bottomTitle">Maintainable</div>
           </section>
