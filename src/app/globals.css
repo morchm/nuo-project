@@ -17,6 +17,11 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   box-sizing: inherit;
+  height: 100%;
+}
+
+body{
+  height: 100%;
 }
 
 menu {
@@ -52,17 +57,6 @@ figcaption {
   text-align: center;
 }
 
-.pageContainer {
-  width: 960px;
-  margin: auto;
-  padding: 2rem 0;
-  /* Centering */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .pageArticle {
   display: flex;
   padding: 2rem 4rem;
@@ -91,14 +85,4 @@ textarea {
   border: 1px solid black;
   border-radius: 3px;
   box-shadow: 1px 1px 2px gray;
-}
-
-/* DEKSTOP CLASS */
-.desktop {
-  display: block;
-}
-
-/* MOBILE CLASS */
-.mobile {
-  display: none;
 }

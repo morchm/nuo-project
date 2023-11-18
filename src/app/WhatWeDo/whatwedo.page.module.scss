@@ -3,3 +3,43 @@
     width: 100vw;
     height: 100vh;
 }
+
+.pageContainer {
+    width: 960px;
+    margin: auto;
+    padding: 2rem 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .pageArticle {
+    display: flex;
+    padding: 2rem 4rem;
+  }
+
+  .desktop{
+    display: block;
+  }
+
+  .mobile{
+    display: none;
+  }
+
+// ---- MOBILE ----
+
+
+@media only screen and (max-width: 900px){
+    .pageContainer{
+        width: 650px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .pageArticle{
+      flex-wrap: wrap;
+    }
+}
+
+

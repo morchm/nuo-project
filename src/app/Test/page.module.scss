@@ -1,0 +1,40 @@
+@import "../variables";
+
+.testBackground {
+  height: 100vh;
+  background-color: gray;
+  //   max-width: 1200px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+.imageContainer {
+  position: relative;
+  // padding: 4rem;
+  //   max-width: 600px;
+  //   height: 600px;
+  //   max-height: 300px;
+}
+
+
+
+.desktopPic {
+  display: block;
+}
+
+.mobilePic {
+  display: none;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+      }
+  }
+
+

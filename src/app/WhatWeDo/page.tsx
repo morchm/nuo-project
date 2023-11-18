@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import styles from "./whatwedo.page.module.scss";
 import Image from "next/image";
 import { Navigation } from "../components/navigation";
@@ -12,15 +12,25 @@ export default async function WhatWeDo() {
 
   return (
     <div id={styles.whatwedoBackground}>
-      <div className="pageContainer">
+      <div className={styles.pageContainer}>
         <Navigation />
-        <article className="pageArticle">
+        <article className={styles.pageArticle}>
           <Image
             src="/images/front-what-we-do-link.png"
             width={220}
             height={500}
             alt="What we do image"
+            className={styles.desktop}
           />
+
+              {/* Mobile image */}
+            <Image
+            src="/images/weba-2-mobil-whatwedo.png"
+            width={600}
+            height={300}
+            alt="What we do site"
+            className={styles.mobile}
+            />
 
           <section className="Textarea">
             <h1>{textData.h1.text}<span style={textData.h1.specialStyle}>{textData.h1.specialText}</span></h1>
