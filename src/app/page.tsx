@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import ImageLinkResponsive from "./components/ImageLinkResponsive";
 //What we do photos
-import whatwedoDeskstop from "../../public/images/front-what-we-do.png";
+import whatwedoDesktop from "../../public/images/front-what-we-do.png";
 import whatwedoMobile from "../../public/images/weba-2-mobil-whatwedo.png";
 //Maintainable photos
 import maintainableDesktop from "../../public/images/front-maintainable.png";
@@ -19,29 +19,32 @@ export default function Home() {
         <Image src="/logo/logo-final.png" width={120} height={60} alt="Logo" />
 
         <div className={styles.imageContainer}>
-          <ImageLinkResponsive
-            href="/WhatWeDo"
-            alt="whatwedo"
-            desktop={whatwedoDeskstop}
-            tablet={whatwedoMobile}
-            mobile={whatwedoMobile}
-          />
+          <Link href="/WhatWeDo">
+            <ImageLinkResponsive
+              alt="whatwedo"
+              desktop={whatwedoDesktop}
+              tablet={whatwedoMobile}
+              mobile={whatwedoMobile}
+            />
+          </Link>
 
-          <ImageLinkResponsive
-            href="/MaintainAble"
-            alt="maintainable"
-            desktop={maintainableDesktop}
-            tablet={maintainableMobile}
-            mobile={maintainableMobile}
-          />
+          <Link href="/MaintainAble">
+            <ImageLinkResponsive
+              alt="maintainable"
+              desktop={maintainableDesktop}
+              tablet={maintainableMobile}
+              mobile={maintainableMobile}
+            />
+          </Link>
 
-          <ImageLinkResponsive
-            href="/GetInTouch"
-            alt="getintouch"
-            desktop={getintouchDesktop}
-            tablet={getintouchMobile}
-            mobile={getintouchMobile}
-          />
+          <Link href="/GetInTouch">
+            <ImageLinkResponsive
+              alt="getintouch"
+              desktop={getintouchDesktop}
+              tablet={getintouchMobile}
+              mobile={getintouchMobile}
+            />
+          </Link>
         </div>
 
         <div className={styles.moreBtn}>And more yet to come..</div>

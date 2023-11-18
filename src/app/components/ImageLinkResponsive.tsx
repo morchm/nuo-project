@@ -4,7 +4,6 @@ import style from "./ImageLinkResponsive.module.scss";
 import Image, { StaticImageData } from "next/image";
 
 function ImageLinkResponsive(props: {
-  href: string;
   alt: string;
   desktop: StaticImageData;
   tablet?: StaticImageData;
@@ -12,10 +11,7 @@ function ImageLinkResponsive(props: {
   className?: string;
 }) {
   return (
-    <Link
-      href={props.href}
-      className={`${props.className} ${style.adaptiveLink__link}`}
-    >
+    <>
       <div
         className={`${style.adaptiveLink__image_container__desktop} ${style.adaptiveLink__image_container}`}
       >
@@ -38,7 +34,7 @@ function ImageLinkResponsive(props: {
           />
         </div>
       )}
-      
+
       {/* Create a mobile image if the input exists in props */}
       {props.mobile && (
         <div
@@ -51,8 +47,7 @@ function ImageLinkResponsive(props: {
           />
         </div>
       )}
-
-    </Link>
+    </>
   );
 }
 

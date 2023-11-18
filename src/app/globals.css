@@ -57,27 +57,13 @@ figcaption {
   text-align: center;
 }
 
-.pageArticle {
-  display: flex;
-  padding: 2rem 4rem;
-}
-
 .Textarea {
   display: flex;
   flex-direction: column;
   margin: 0 1rem;
 }
 
-.bottomTitle {
-  align-self: flex-end;
-  padding: 3px;
-  border-radius: 3px;
-  margin-top: auto;
-  background-color: black;
-  color: white;
 
-  font-size: 20px;
-}
 
 input,
 textarea {
