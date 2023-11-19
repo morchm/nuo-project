@@ -1,10 +1,20 @@
 @import "../variables";
 
+.navBar{
+  display: flex;
+}
+
 .navBtn {
   position: relative;
   :hover {
     transform: scale(1.1);
   }
+}
+
+.navMenu {
+  width: 250px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .navUnderline {
@@ -17,7 +27,23 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .navMenu{
-    margin: 0 3rem;
+
+  .navBar{
+    padding: 1rem 3rem 0 3rem;
   }
+
+  .navUnderline{
+    bottom: initial;
+    top: -60px;
+  }
+
+  .navBackBtn{
+    margin-right: auto ;
+  }
+
+
+  
+
+
+
 }

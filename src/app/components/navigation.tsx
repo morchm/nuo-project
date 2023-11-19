@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styles from "./navigation.page.module.scss";
 import Link from "next/link";
@@ -11,20 +11,19 @@ export function Navigation() {
   console.log(path);
 
   return (
-    <nav>
+    <nav className={styles.navBar}>
+      {/* Back to home */}
+      <li className={styles.navBackBtn}>
+        <Link href="/" className={styles.navBtn}>
+          <Image
+            src="/navigation/svg/back.svg"
+            width={42}
+            height={60}
+            alt="back button"
+          />
+        </Link>
+      </li>
       <menu className={styles.navMenu}>
-        {/* Back to home */}
-        <li>
-          <Link href="/" className={styles.navBtn}>
-            <Image
-              src="/navigation/svg/back.svg"
-              width={42}
-              height={60}
-              alt="back button"
-            />
-          </Link>
-        </li>
-
         {/* Links til de andre sider */}
         <li>
           <Link href="/WhatWeDo" className={styles.navBtn}>
@@ -48,7 +47,7 @@ export function Navigation() {
               height={60}
               alt="maintain able button"
             />
-           {path === "/MaintainAble" && (
+            {path === "/MaintainAble" && (
               <ButtonUnderline src="/navigation/nav-2-where.png" />
             )}
           </Link>

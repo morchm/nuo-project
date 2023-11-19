@@ -6,7 +6,7 @@ export default function BottomTitle(props: {
   logoColor: string;
 }) {
   return (
-    <div>
+    <>
       <p className={styles.bottomTitleDesktop}>{props.titleText}</p>
       <Image
         src={"/logo/logo-" + props.logoColor + ".png"}
@@ -15,6 +15,6 @@ export default function BottomTitle(props: {
         height={40}
         className={styles.bottomTitleMobile}
       />
-    </div>
+    </>
   );
 }

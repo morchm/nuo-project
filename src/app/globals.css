@@ -24,11 +24,6 @@ body{
   height: 100%;
 }
 
-menu {
-  width: 280px;
-  display: flex;
-  justify-content: space-between;
-}
 
 li {
   text-decoration: none;
