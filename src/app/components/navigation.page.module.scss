@@ -1,15 +1,23 @@
-.navBtn{
-    position: relative;
-    :hover{
-        transform: scale(1.1);
-    }
+@import "../variables";
+
+.navBtn {
+  position: relative;
+  :hover {
+    transform: scale(1.1);
+  }
 }
 
-.navUnderline{
-position: absolute;
-left: 0;
-bottom: -10px;
-:hover{
+.navUnderline {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  :hover {
     transform: scale(1) !important ;
+  }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .navMenu{
+    margin: 0 3rem;
+  }
 }

@@ -32,9 +32,7 @@ export default async function WhatWeDo() {
               </span>
             </h1>
             <p>{textData.p.text}</p>
-
-            <BottomTitle titleText="What We Do"/>
-
+            <BottomTitle titleText="What We Do" logoColor="a" />
           </section>
         </article>
       </div>

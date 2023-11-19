@@ -12,7 +12,7 @@ export function Navigation() {
 
   return (
     <nav>
-      <menu>
+      <menu className={styles.navMenu}>
         {/* Back to home */}
         <li>
           <Link href="/" className={styles.navBtn}>

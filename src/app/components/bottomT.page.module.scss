@@ -1,9 +1,31 @@
+@import "../variables";
+
 .bottomTitleDesktop {
-    width: 150px;
-    padding: 3px;
-    border-radius: 3px;
-    // margin-top: auto;
-    background-color: black;
-    color: white;
-    font-size: 20px;
+  width: 150px;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+
+  float: right;
+  // position: absolute;
+  // bottom: 0;
+  // right: 0;
+}
+
+.bottomTitleMobile {
+  display: none;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .bottomTitleDesktop {
+    display: none;
   }
+
+  .bottomTitleMobile {
+    display: block;
+    margin: 10rem 0 1rem 0;
+    float: right;
+  }
+}
