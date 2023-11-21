@@ -19,6 +19,7 @@ export default function Modal() {
     subject: yup.string().required("Emne er påkrævet"),
     textarea: yup.string().required("Besked er påkrævet"),
   });
+
   const {
     register,
     handleSubmit,
@@ -32,6 +33,7 @@ export default function Modal() {
 
   return (
     <>
+    {/* ---- CONTACTS ---- */}
       <div className={styles.contactContainer}>
         <figure onClick={() => setIsOpen(true)} className={styles.contactBtn}>
           <Image
@@ -64,6 +66,7 @@ export default function Modal() {
         </figure>
       </div>
 
+      {/* ---- MODAL ---- */}
       <ReactModal className={modalStyle.modal} isOpen={isOpen}>
         <button
           className={modalStyle.modalCloseBtn}
@@ -112,7 +115,7 @@ export default function Modal() {
               />
               <h6>{errors.textarea?.message}</h6>
             </div>
-            <input type="submit" />
+            <input type="submit" className={modalStyle.submitBtn}/>
           </div>
         </form>
       </ReactModal>

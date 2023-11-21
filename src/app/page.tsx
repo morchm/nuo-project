@@ -19,7 +19,7 @@ export default function Home() {
         <Image src="/logo/logo-final.png" width={120} height={60} alt="Logo" />
 
         <div className={styles.imageContainer}>
-          <Link href="/WhatWeDo">
+          <Link href="/WhatWeDo" className={styles.links}>
             <ImageLinkResponsive
               alt="whatwedo"
               desktop={whatwedoDesktop}
@@ -28,7 +28,7 @@ export default function Home() {
             />
           </Link>
 
-          <Link href="/MaintainAble">
+          <Link href="/MaintainAble" className={styles.links}>
             <ImageLinkResponsive
               alt="maintainable"
               desktop={maintainableDesktop}
@@ -37,7 +37,7 @@ export default function Home() {
             />
           </Link>
 
-          <Link href="/GetInTouch">
+          <Link href="/GetInTouch" className={styles.links}>
             <ImageLinkResponsive
               alt="getintouch"
               desktop={getintouchDesktop}

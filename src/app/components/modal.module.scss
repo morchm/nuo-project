@@ -2,37 +2,59 @@
   width: 500px;
   padding: 2rem;
   border-radius: 10px;
-
   background-color: white;
-
-  
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+
 }
 
-.modalInput{
-    margin: 1rem;
-
-    display: flex;
-    flex-direction: column;
+.modalInputContainer {
+  display: flex;
+  flex-direction: column;
 }
 
-.modalCloseBtn{
+.modalInput {
+  margin: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCloseBtn {
   float: right;
   width: 30px;
   height: 30px;
   padding: 0.2rem;
   border-radius: 25%;
+  border: none;
+  box-shadow: 1px 3px 2px rgb(186, 186, 186);
+  transition: 100ms ease-in-out;
 
-  transition: 200ms ease-in-out;
+  background-color: orange;
+  color: white;
 
-  &:hover{
-    color: red;
-    border: 2px solid red;
+  &:hover {
     cursor: pointer;
+    background-color: lighten(orange, 10%);
+  }
+}
+
+.submitBtn {
+  width: 300px;
+  border-radius: 25px;
+  margin: auto;
+  border: none;
+  box-shadow: 1px 3px 2px rgb(186, 186, 186);
+  transition: 100ms ease-in-out;
+
+  background-color: orange;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: orange;
+    background-color: lighten(orange, 10%);
   }
 }

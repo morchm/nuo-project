@@ -10,6 +10,7 @@ function ImageLinkResponsive(props: {
   mobile?: StaticImageData;
   className?: string;
 }) {
+  
   return (
     <>
       <div
