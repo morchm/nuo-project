@@ -1,4 +1,7 @@
+@import "../variables";
+
 .modal {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.261);
   width: 500px;
   padding: 2rem;
   border-radius: 10px;
@@ -7,7 +10,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 
 }
 
@@ -56,5 +58,16 @@
     cursor: pointer;
     background-color: orange;
     background-color: lighten(orange, 10%);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .modal{
+    width: 90%;
+  }
+
+  .submitBtn{
+    width: unset;
+    min-width: 200px;
   }
 }

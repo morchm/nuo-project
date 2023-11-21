@@ -8,8 +8,6 @@ import { usePathname } from "next/navigation";
 export function Navigation() {
   const path = usePathname();
 
-  console.log(path);
-
   return (
     <nav className={styles.navBar}>
       {/* Back to home */}

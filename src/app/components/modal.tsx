@@ -1,12 +1,16 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactModal from "react-modal";
 import { useForm, Resolver } from "react-hook-form";
 
 import Image from "next/image";
 import styles from "../GetInTouch/getintouch.page.module.scss";
 import modalStyle from "./modal.module.scss";
+import ImageLinkResponsive from "./ImageLinkResponsive";
+import contact1 from "../../../public/images/whatwedo-small.png";
+import contact2 from "../../../public/images/maintainable-small.png";
+import contact3 from "../../../public/images/getintouch-small.png";
 
 import { yupResolver } from "@hookform/resolvers/yup"; //Valider data via skema
 import * as yup from "yup";
@@ -31,38 +35,40 @@ export default function Modal() {
     console.log(data);
   };
 
+  //For at gemme body når modalet er åbnet, så folk der bruger "assistive screenreader" kun får læst modal op
+  useEffect(() => {
+    ReactModal.setAppElement("body");
+  }, []);
+
   return (
     <>
-    {/* ---- CONTACTS ---- */}
+      {/* ---- CONTACTS ---- */}
       <div className={styles.contactContainer}>
         <figure onClick={() => setIsOpen(true)} className={styles.contactBtn}>
-          <Image
-            src="/images/whatwedo-small.png"
-            width={120}
-            height={120}
+          <ImageLinkResponsive
+            desktop={contact1}
+            tablet={contact1}
             alt="Contact "
           />
-          <figcaption>It@coolish.com</figcaption>
+          <figcaption className={styles.caption}>It@coolish.com</figcaption>
         </figure>
 
         <figure onClick={() => setIsOpen(true)} className={styles.contactBtn}>
-          <Image
-            src="/images/maintainable-small.png"
-            width={120}
-            height={120}
+          <ImageLinkResponsive
+            desktop={contact2}
+            tablet={contact2}
             alt="Contact "
           />
-          <figcaption>pr@coolish.com</figcaption>
+          <figcaption className={styles.caption}>pr@coolish.com</figcaption>
         </figure>
 
         <figure onClick={() => setIsOpen(true)} className={styles.contactBtn}>
-          <Image
-            src="/images/getintouch-small.png"
-            width={120}
-            height={120}
+          <ImageLinkResponsive
+            desktop={contact3}
+            tablet={contact3}
             alt="Contact "
           />
-          <figcaption>mn@coolish.com</figcaption>
+          <figcaption className={styles.caption}>mn@coolish.com</figcaption>
         </figure>
       </div>
 
@@ -110,12 +116,12 @@ export default function Modal() {
               <label>Besked</label>
               <textarea
                 placeholder="Indtast besked"
-                rows="10"
+                rows={10}
                 {...register("textarea")}
               />
               <h6>{errors.textarea?.message}</h6>
             </div>
-            <input type="submit" className={modalStyle.submitBtn}/>
+            <input type="submit" className={modalStyle.submitBtn} />
           </div>
         </form>
       </ReactModal>
