@@ -15,6 +15,7 @@ import contact3 from "../../../public/images/getintouch-small.png";
 import { yupResolver } from "@hookform/resolvers/yup"; //Valider data via skema
 import * as yup from "yup";
 
+
 export default function Modal() {
   const [isOpen, setIsOpen] = useState(false);
   const schema = yup.object().shape({
@@ -31,6 +32,7 @@ export default function Modal() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  
   const onSubmit = (data: any) => {
     console.log(data);
   };
@@ -48,6 +50,7 @@ export default function Modal() {
           <ImageLinkResponsive
             desktop={contact1}
             tablet={contact1}
+            mobile={contact1}
             alt="Contact "
           />
           <figcaption className={styles.caption}>It@coolish.com</figcaption>
@@ -57,6 +60,7 @@ export default function Modal() {
           <ImageLinkResponsive
             desktop={contact2}
             tablet={contact2}
+            mobile={contact2}
             alt="Contact "
           />
           <figcaption className={styles.caption}>pr@coolish.com</figcaption>
@@ -66,6 +70,7 @@ export default function Modal() {
           <ImageLinkResponsive
             desktop={contact3}
             tablet={contact3}
+            mobile={contact3}
             alt="Contact "
           />
           <figcaption className={styles.caption}>mn@coolish.com</figcaption>
