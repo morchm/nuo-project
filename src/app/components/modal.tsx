@@ -31,6 +31,7 @@ export default function Modal() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  
   const onSubmit = (data: any) => {
     console.log(data);
   };
