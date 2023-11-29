@@ -8,7 +8,7 @@ function ImageLinkResponsive(props: {
   desktop: StaticImageData;
   tablet?: StaticImageData;
   mobile?: StaticImageData;
-  className?: string;
+  // className?: string;
 }) {
   
   return (
